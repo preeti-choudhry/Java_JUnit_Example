@@ -1,11 +1,5 @@
 
 import org.junit.Test;
-import org.junit.jupiter.api.*;
-import sun.jvm.hotspot.utilities.Assert;
-import sun.jvm.hotspot.utilities.AssertionFailure;
-
-import org.junit.Test;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -36,6 +30,7 @@ public class TestPrimeNumbers {
                 boolean result = pn.checkPrime(num);
 
                 assertEquals(true, result);
+                assertTrue("true",result);
 
                 System.out.println(num + " is Prime");
             }
@@ -53,7 +48,7 @@ public class TestPrimeNumbers {
             File inputFile = new File("src/test/resources/test-input.txt");
 
             Scanner in = new Scanner(inputFile);
-            while (in.hasNextInt()) {
+            //while (in.hasNextInt()) {
                 int a = in.nextInt();
                 int b = in.nextInt();
                 PrimeNumbers pn = new PrimeNumbers(a, b);
@@ -68,7 +63,7 @@ public class TestPrimeNumbers {
 
                 }
 
-            }
+            //}
 
         } catch (IOException e) {
             System.out.print("File not found!!!");
